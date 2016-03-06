@@ -91,7 +91,6 @@ public class FruitMachine {
         boolean jackpot = false;
         boolean won = false;
 
-        // This comparison stuff is rly inneficient i should probs make it better
         if (chars[0] == chars[1] && chars[1] == chars[2]) {
             if (chars[0] == 'B') {
                 winnings = 20.00;
@@ -100,8 +99,7 @@ public class FruitMachine {
                 winnings = 3.00;
                 won = true;
             }
-        } else if ((Character.compare(chars[0], chars[1]) == 1 && Character.compare(chars[1], chars[2]) == 0)
-                || (Character.compare(chars[0], chars[2]) == 1 && Character.compare(chars[0], chars[1]) == 0)) {
+        } else if (chars[0] == chars[1] || chars[0] == chars[2]) {
             winnings = 1.00;
         }
 
