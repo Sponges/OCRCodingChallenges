@@ -21,19 +21,17 @@ public class FruitMachine {
     public FruitMachine() {
         this.player = new Player(10.00);
 
-        new Thread(() -> {
-            scanner = new Scanner(System.in);
-            String input;
-            try {
-                while ((input = scanner.nextLine()) != null) {
-                    try {
-                        processInput(input);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        scanner = new Scanner(System.in);
+        String input;
+        try {
+            while ((input = scanner.nextLine()) != null) {
+                try {
+                    processInput(input);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            } catch (IllegalStateException ignored) {}
-        }).start();
+            }
+        } catch (IllegalStateException ignored) {}
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
