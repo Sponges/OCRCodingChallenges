@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Player {
 
+    // unnecessary thread safety, should rly make it volatile anyway
     private final AtomicInteger plays = new AtomicInteger(0);
 
     private double earnings = 0;
