@@ -10,6 +10,7 @@ public class WordSubtraction {
         String one = scanner.nextLine();
         System.out.println("Input another string:");
         String two = scanner.nextLine();
+        scanner.close();
         System.out.println("Cheers buddy.");
 
         int oneValue = 0;
